@@ -1,4 +1,6 @@
+package Dia2207;
 
+import java.util.Scanner;
 public class Questão1 {
 
     public static void main(String[] args) {
@@ -75,9 +77,7 @@ public class Questão2 {
 }
 }
 
-package Dia2207;
 
-import java.util.Scanner;
 
 public class Questão3 {
     public static void main(String[] args) {
@@ -89,65 +89,76 @@ public class Questão3 {
         pessoas[1] = new Aluno("Airton", 18, "2º ano B");
         pessoas[2] = new Professor("Pedro V", 38, "Matemática");
 
-        System.out.println("Lista de pessoas:");
-        for (Pessoa p : pessoas) {
-            p.mostrarDados();
-            System.out.println("---------------------");
+        
         }
     }
 }
 
 
-abstract class Pessoa {
-    protected String nome;
-    protected int idade;
-    protected String funcao;
-
-    public Pessoa(String nome, int idade, String funcao) {
-        this.nome = nome;
-        this.idade = idade;
-        this.funcao = funcao;
-    }
-
-    public abstract void mostrarDados();
-}
 
 
-class Aluno extends Pessoa {
-    private String turma;
+public class Questão4 {
 
-    public Aluno(String nome, int idade, String turma) {
-        super(nome, idade, "Aluno");
-        this.turma = turma;
+    static class Aluno {
+        String nome;
+        double nota1;
+        double nota2;
+
+    
+        public Aluno(String nome, double nota1, double nota2) {
+            this.nome = nome;
+            this.nota1 = nota1;
+            this.nota2 = nota2;
+        }
+
+        
+        public void mostrarDados() {
+            System.out.println("Nome: " + nome);
+            System.out.println("Nota 1: " + nota1);
+            System.out.println("Nota 2: " + nota2);
+            System.out.println("Média: " + ((nota1 + nota2) / 2));
+            System.out.println("------------------------");
+        }
     }
 
     
-    public void mostrarDados() {
-        System.out.println("Função: " + funcao);
-        System.out.println("Nome: " + nome);
-        System.out.println("Idade: " + idade);
-        System.out.println("Turma: " + turma);
+    public static void main(String[] args) {
+        Scanner tec = new Scanner(System.in);
+
+    
+        Aluno[] alunos = new Aluno[5];
+
+       
+        alunos[0] = new Aluno("Caio", 30.5, 22.5);
+        alunos[1] = new Aluno("Pedro", 25.0, 18.0);
+
+        
+        System.out.println(alunos[0].nome + " - Nota1: " + alunos[0].nota1 + ", Nota2: " + alunos[0].nota2);
+        System.out.println(alunos[1].nome + " - Nota1: " + alunos[1].nota1 + ", Nota2: " + alunos[1].nota2);
+
+        
+        System.out.println("Entre com as notas do aluno 3:");
+        System.out.print("Nome: ");
+        String nome3 = tec.nextLine();
+        System.out.print("Nota 1: ");
+        double n1 = tec.nextDouble();
+        System.out.print("Nota 2: ");
+        double n2 = tec.nextDouble();
+        tec.nextLine(); 
+
+        alunos[2] = new Aluno(nome3, n1, n2);
+
+        
+        alunos[3] = new Aluno("Carlos", 19.0, 28.0);
+        alunos[4] = new Aluno("Daniela", 27.5, 26.0);
+
+        Mostrando todos os dados dos 5 alunos
+        System.out.println("\nInformações dos 5 alunos:");
+        for (int i = 0; i < alunos.length; i++) {
+            alunos[i].mostrarDados();
+        }
     }
 }
-
-
-class Professor extends Pessoa {
-    private String disciplina;
-
-    public Professor(String nome, int idade, String disciplina) {
-        super(nome, idade, "Professor");
-        this.disciplina = disciplina;
-    }
-
-   
-    public void mostrarDados() {
-        System.out.println("Função: " + funcao);
-        System.out.println("Nome: " + nome);
-        System.out.println("Idade: " + idade);
-        System.out.println("Disciplina: " + disciplina);
-    }
-}
-
 
 
 
