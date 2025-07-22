@@ -75,15 +75,106 @@ public class Questão2 {
 }
 }
 
+package Dia2207;
+
+import java.util.Scanner;
+
 public class Questão3 {
     public static void main(String[] args) {
-    Scanner tec = new Scanner(System.in);
-     Pessoas[] pessoa = new Pessoa[3];
-             
-      pessoas[0] = new Pessoa("Caio" , "2 ano A" , "Aluno" , 16);
-      pessoas[1] = new Pessoa("Airton" , "2 ano B" , "Aluno" , 18);
-      pessoas[2] = new Pessoa("Pedro V" , "Professor" , 38);
-      
+        Scanner tec = new Scanner(System.in);
+
+        Pessoa[] pessoas = new Pessoa[3];
+
+        pessoas[0] = new Aluno("Caio", 16, "2º ano A");
+        pessoas[1] = new Aluno("Airton", 18, "2º ano B");
+        pessoas[2] = new Professor("Pedro V", 38, "Matemática");
+
+        System.out.println("Lista de pessoas:");
+        for (Pessoa p : pessoas) {
+            p.mostrarDados();
+            System.out.println("---------------------");
+        }
     }
 }
 
+
+abstract class Pessoa {
+    protected String nome;
+    protected int idade;
+    protected String funcao;
+
+    public Pessoa(String nome, int idade, String funcao) {
+        this.nome = nome;
+        this.idade = idade;
+        this.funcao = funcao;
+    }
+
+    public abstract void mostrarDados();
+}
+
+
+class Aluno extends Pessoa {
+    private String turma;
+
+    public Aluno(String nome, int idade, String turma) {
+        super(nome, idade, "Aluno");
+        this.turma = turma;
+    }
+
+    
+    public void mostrarDados() {
+        System.out.println("Função: " + funcao);
+        System.out.println("Nome: " + nome);
+        System.out.println("Idade: " + idade);
+        System.out.println("Turma: " + turma);
+    }
+}
+
+
+class Professor extends Pessoa {
+    private String disciplina;
+
+    public Professor(String nome, int idade, String disciplina) {
+        super(nome, idade, "Professor");
+        this.disciplina = disciplina;
+    }
+
+   
+    public void mostrarDados() {
+        System.out.println("Função: " + funcao);
+        System.out.println("Nome: " + nome);
+        System.out.println("Idade: " + idade);
+        System.out.println("Disciplina: " + disciplina);
+    }
+}
+
+
+
+
+public class Questão5 {
+    public static void main(String[] args) {
+    Scanner tec = new Scanner(System.in);
+
+     double nota [] = new double[20];
+     System.out.println("Nota de Pedro:");
+     double notaPedro = tec.nextDouble();
+     nota[0]= notaPedro;
+     
+     System.out.println("Nota de Caio");
+     double notaCaio = tec.nextDouble();
+     nota[1]= notaCaio;
+     
+     System.out.println("Nota de Ivan");
+     double notaIvan = tec.nextDouble();
+     nota[2]= notaIvan;
+     
+     System.out.println("Nota de João");
+     double notaJoão = tec.nextDouble();
+     nota[3]= notaJoão;
+     
+     System.out.println("Pedro Tirou: " +nota[0]);
+     System.out.println("Caio Tirou: " +nota[1]);
+     System.out.println("Ivan tirou: " +nota[2]);   
+     System.out.println("João tirou: " +nota[3]); 
+}
+}
