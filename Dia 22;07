@@ -1,0 +1,89 @@
+
+public class Questão1 {
+
+    public static void main(String[] args) {
+    Scanner tec = new Scanner(System.in);
+     System.out.println("Entre com o seu nome");
+     String nome = tec.nextLine();
+     
+     double nota [] = new double[20];
+     System.out.println("Entre com a nota 1");
+     double nota1 = tec.nextDouble();
+     nota[0]= nota1;
+     
+     System.out.println("Entre com a nota 2");
+     double nota2 = tec.nextDouble();
+     nota[1]= nota2;
+     
+     System.out.println("Entre com a nota 3");
+     double nota3 = tec.nextDouble();
+     nota[2]= nota3;
+     
+     System.out.println("Entre com a nota 4");
+     double nota4 = tec.nextDouble();
+     nota[3]= nota4;
+     
+     System.out.println("Nome: " +nome );
+     System.out.println("Nota 1: " +nota[0]);
+     System.out.println("Nota 2: " +nota[1]);
+     System.out.println("Nota 3: " +nota[2]);   
+     System.out.println("Nota 4: " +nota[3]);   
+     
+     
+    }
+    
+}
+
+
+public class Questão2 {
+     public static void main(String[] args) {
+    Scanner tec = new Scanner(System.in);
+     System.out.println("Entre com o seu nome");
+     String nome = tec.nextLine();
+     
+     double nota [] = new double[20];
+     System.out.println("Entre com a nota 1");
+     double nota1 = tec.nextDouble();
+     nota[0]= nota1;
+     
+     System.out.println("Entre com a nota 2");
+     double nota2 = tec.nextDouble();
+     nota[1]= nota2;
+     
+     System.out.println("Entre com a nota 3");
+     double nota3 = tec.nextDouble();
+     nota[2]= nota3;
+     
+     System.out.println("Entre com a nota 4");
+     double nota4 = tec.nextDouble();
+     nota[3]= nota4;
+     
+     System.out.println("Nome: " +nome );
+     System.out.println("Nota 1: " +nota[0]);
+     System.out.println("Nota 2: " +nota[1]);
+     System.out.println("Nota 3: " +nota[2]);   
+     System.out.println("Nota 4: " +nota[3]); 
+     
+     double soma = nota[0] + nota[1] + nota[2] + nota[3];
+     double resultado = soma / 4;
+     
+     if (resultado >= 6) {
+         System.out.println("Aprovado");
+     } else {
+         System.out.println("Recuperacão");
+     }
+}
+}
+
+public class Questão3 {
+    public static void main(String[] args) {
+    Scanner tec = new Scanner(System.in);
+     Pessoas[] pessoa = new Pessoa[3];
+             
+      pessoas[0] = new Pessoa("Caio" , "2 ano A" , "Aluno" , 16);
+      pessoas[1] = new Pessoa("Airton" , "2 ano B" , "Aluno" , 18);
+      pessoas[2] = new Pessoa("Pedro V" , "Professor" , 38);
+      
+    }
+}
+
