@@ -97,7 +97,31 @@ public class AtvJava {
       //  }
 
       //7 Questão
-      
+        
+      //  double[] vendas = {-500.0, 1200.0, -300.0, 0.0, 450.0, -50.0, 100.0, 200.0, -10.0, 400.0};
+      //  String[] nomes = {"Caio", "Flávia", "Ivan", "Carol", "Gabigay", "Sofia", "Vinicius", "Gabi", "Lucas", "Bianca"};
+      //  int negativos = 0;
+      //  for (int i = 0; i < vendas.length; i++) {
+      //      if (vendas[i] < 0) {
+      //         negativos++;
+      //         System.out.println("Vendedor: " + nomes[i] + " teve vendas negativas: " + vendas[i]);
+      //     }
+      // }
+      // System.out.println("Total de vendedores com vendas negativas: " + negativos);
+      //  }
+
+        
       //8 Questão
-}
-}
+
+      // int[] estoque = {45, 12, 78, 34, 90, 56, 23, 99, 15, 10};
+      // String[] produtos = {"Arroz", "Feijão", "Açúcar", "Sal", "Café", "Óleo", "Macarrão", "Leite", "Farinha", "Molho"};
+      // int maior = estoque[0];
+      // String produtoMaior = produtos[0];
+      // for (int i = 1; i < estoque.length; i++) {
+      //   if (estoque[i] > maior) {
+      //          maior = estoque[i];
+      //          produtoMaior = produtos[i];
+      //      }
+      //  }
+      //  System.out.println("Produto com maior estoque: " + produtoMaior + " - Quantidade: " + maior);
+      //    }
